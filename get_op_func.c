@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "holberton.h"
 /**
  * _printf - identify function
  * @format: funct
@@ -15,29 +15,19 @@ int _printf(const char *format, ...)
 		{NULL, NULL},
 	};
 	int i, i2;
-	int st;
-
 	va_start(args, format);
 
 	i = 0;
-	while (format[i] != '\0' && format != NULL)
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			i2 = 0;
-			while (i2 < 2)
-			{
-				if (format[i] == ops[i2].op)
-				{
-					return (ops[i2].f);
-				}
-				i2++;
-			}
-		}
 
+	while (i < 2)
+	{
+		if (format[i] == ops[i2].op)
+		{
+			return (ops[i].f);
+		}
 		i++;
 	}
+
 	va_end(args);
 	return (0);
 }
