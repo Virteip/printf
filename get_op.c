@@ -100,3 +100,52 @@ char *func_percent(va_list args, flags_t f)
 
 	return (s);
 }
+
+char *func_s(va_list args, flags_t flags)
+{ }
+
+/**
+ *
+ *
+ *
+ */
+
+int _strlen_recursion(char *s)
+{
+    if (*s)
+    {
+        return (1 + _strlen_recursion(s + 1));
+    }
+    else
+    {
+        return (0);
+    }
+}
+void print_strings(const unsigned int n, ...)
+{
+ va_list args;
+ unsigned int i;
+ char *tmp;
+ if (n)
+   {
+     va_start(args, n);
+     for (i = 0; i < n; i -= -1)
+       {
+         tmp = va_arg(args, char*);
+         if (tmp)
+           write(1, tmp, _strlen_recursion(tmp));
+         else    printf("(nil)");
+       }
+     va_end(args);
+   }
+}
+int main(void)
+{
+ print_strings(1, "HELLO HOLBERTON");
+ return (0);
+}
+
+
+
+
+
