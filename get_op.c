@@ -102,7 +102,8 @@ char *func_percent(va_list args, flags_t f)
 }
 
 char *func_s(va_list args, flags_t flags)
-{ }
+{ 
+}
 
 /**
  *
