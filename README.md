@@ -97,18 +97,20 @@ Len:[12]
 
 Brief description of files contained in project:
 
-|                File                          |Content                         |
-|----------------|-------------------------------|-----------------------------|
-|holberton.h|Contains prototypes of functions and structures to be called.            
-|_printf.c          |Selects function to be called given a certain character and then uses the string saved in the buffer along with the write function to print the result.          |
-|buffyflags.c          |Scans argument for certain chars and uses boolean variables (flags) to add the character to the print.
-|numbering_system.c          |Functions to handle hex, oct, unsigned int conversions. 
-|convertions.c|Functions to handle rot13, rev, and special case conversions.
-|functions.c|Functions to handle int, string, %, and binary conversions.
-|spec_chars.c          |Functions to handle address prints, spaces for numbers, special 0's to hex and oct conversions.
-|width.c | Function to increase size of string and adapt length to space or provide minimum length.
-|README| .this
+[**holberton.h**](./holberton.h) : contains prototypes of functions and structures to be called.            
+[**_printf.c**](./_printf.c): selects function to be called given a certain character and then uses the string saved in the buffer along with the write function to print the result. 
+[**buffyflags.c**](./buffyflags.c):  creates buffer and saves string to be later printed with write.
+[**buffyflags2.c**](./buffyflags2.c): scans argument for certain chars and uses boolean variables (flags) to add the character to the print.
+[**functions.c**](./functions.c): functions to convert chars to string, handle ints, change args to strings, and to binary.
+[**numbering_system.c**](./numbering_system.c): change unsigned int to string, octal to string.
+[**numbering_system2.c**](./numbering_system2.c): string with hexa.
+[**spc_chars.c**](./spc_chars.c): nil array to be printed, prints address.
+[**spc_chars2.c**](./spc_chars.c): malloc for % sign; adds '+', '  ', '0', '0x', or '0X'.
+[**width.c**](./width.c): adjusts string length.
+[**convertions.c**](./convertions.c):  base funcs to convert to rot13, rev.
+[**convertions_2.c**](./convertions_2.c):  strings with special case.
 
+README.md: this.
 
 
 
