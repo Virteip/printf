@@ -4,20 +4,20 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
- * struct flag_settings - structure for flags
- * @sign: sign
- * @space: space
- * @left: left
- * @hash: hash
- * @pad: pad
- * @width: width
- * @prec: precision
- * @lng: long
- * @sht: short
- * @conv: conversion
- * @legit: legit flags
+ * struct flag_settings - It's the structure for flags
+ * @sign: sign characteristic
+ * @space: space characteristic
+ * @left: left characteristic
+ * @hash: hash characteristic
+ * @pad: pad characteristic
+ * @width: width characteristic
+ * @prec: precision characteristic
+ * @lng: long characteristic
+ * @sht: short characteristic
+ * @conv: conversion characteristic
+ * @legit: legit flags characteristic
  */
 typedef struct flag_settings
 {
@@ -35,8 +35,8 @@ typedef struct flag_settings
 } flags_t;
 
 /**
- * struct spec - structure for specifier to function
- * @s: specifier character
+ * struct spec - structure for specifier a function
+ * @s: character specifier
  * @f: function pointer
  */
 typedef struct spec
@@ -47,7 +47,7 @@ typedef struct spec
 
 int _printf(const char *format, ...);
 
-/*conversion.c*/
+/*Functions for functions.c file*/
 char *func_d(va_list, flags_t);
 char *func_c(va_list, flags_t);
 char *func_s(va_list, flags_t);
@@ -63,7 +63,7 @@ char *rot13(char *s);
 char *func_rot13(va_list, flags_t);
 char *func_S(va_list, flags_t);
 
-/*misc.c*/
+/*Functions for spec_chars.c and width.c files*/
 char *create_buffer(int);
 char *revstr(char *);
 int isconv(char);

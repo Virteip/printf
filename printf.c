@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
  * _printf - prints a given string along with arguments
- * @format: string to print
+ * @format: string to prints
  * Return: integer number of characters displayed to the screen
+ * Description: Creation of structure and denomination of new functions
  */
 int _printf(const char *format, ...)
 {
@@ -27,7 +28,7 @@ int _printf(const char *format, ...)
 		{'\0', NULL}
 	};
 	flags_t flags;
-	int BUFSIZE = 1024;
+	int BUFSIZE = 2048;
 
 	if (!format)
 		return (-1);

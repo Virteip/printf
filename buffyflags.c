@@ -1,9 +1,9 @@
 #include "holberton.h"
-
 /**
- *create_buffer-helper function to create buffer
- *@size: size of the buffer
- *Return: pointer to buffer
+ * create_buffer-helper function to create buffer
+ * @size: size of the buffer
+ * Return: pointer to buffer
+ * Description: Write function for create buffer
  */
 char *create_buffer(int size)
 {
@@ -22,6 +22,7 @@ char *create_buffer(int size)
  * @mods: specifier modifier string to parse
  * @n: integer value for how many chars to parse through
  * Return: flag struct containing all the flags
+ * Description: Write function for use flags
  */
 flags_t getflags(char *mods, int n)
 {
@@ -42,14 +43,14 @@ flags_t getflags(char *mods, int n)
 	flags.conv = mods[n];
 	flags.legit = 0;
 
-	for (i = 0; conv[i]; i++)
+	for (i = 0; conv[i]; i -= -1)
 		if (mods[n] == conv[i])
 			break;
 	if (!conv[i])
 		return (flags);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n; i -= -1)
 	{
-		for (j = 0; modlist[j]; j++)
+		for (j = 0; modlist[j]; j -= -1)
 			if (mods[i] == modlist[j])
 				break;
 		if (!modlist[j])
@@ -76,22 +77,22 @@ flags_t getflags(char *mods, int n)
 			flags.pad = 1;
 			break;
 		}
-		i++;
+		i -= -1;
 	}
 	while (mods[i] >= '0' && mods[i] <= '9')
 	{
 		width = width * 10 + mods[i] - '0';
-		i++;
+		i -= -1;
 	}
 	flags.width = width;
 
 	if (mods[i] == '.')
 	{
-		i++;
+		i -= -1;
 		while (mods[i] >= '0' && mods[i] <= '9')
 		{
 			prec = prec * 10 + mods[i] - '0';
-			i++;
+			i -= -1;
 		}
 		flags.prec = prec;
 	}
@@ -106,16 +107,17 @@ flags_t getflags(char *mods, int n)
 }
 
 /**
- *isconv-helper function to check if character is in the CONVLIST
- *@c: variable type char
- *Return: 1 if c is in FLAGS list, 0 otherwise
+ * isconv-helper function for check if character is in the CONVLIST
+ * @c: variable type char
+ * Return: 1 if c is in FLAGS list, 0 otherwise
+ * Description: Function for check characters
  */
 int isconv(char c)
 {
 	int i;
 	char *FLAGS = "0123456789.+- #lh";
 
-	for (i = 0; FLAGS[i]; i++)
+	for (i = 0; FLAGS[i]; i -= -1)
 	{
 		if (c == FLAGS[i])
 			return (1);
@@ -137,19 +139,20 @@ int iswp(char c)
 }
 
 /**
- *revstr-helper function to reverse the string
- *@s: pointer to char
- *Return: return string
+ * revstr-helper function to reverse the string
+ * @s: pointer to char
+ * Return: return string
+ * Description: Write function for reverse a string
  */
 char *revstr(char *s)
 {
 	int i, len;
 	char temp;
 
-	for (len = 0; s[len]; len++)
+	for (len = 0; s[len]; len -= -1)
 		;
 	len--;
-	for (i = 0; i < len; i++, len--)
+	for (i = 0; i < len; i -= -1, len--)
 	{
 		temp = s[i];
 		s[i] = s[len];
