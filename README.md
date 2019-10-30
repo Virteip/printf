@@ -129,4 +129,5 @@ README.md: this.
 
 ### Contact Info:
 Git: [David Castellanos](https://github.com/davidcastellanos), [Sergio Pietri](https://github.com/Virteip)
+
 Twitter: [@davcastellanosp](https://twitter.com/davcastellanosp), [@sergiopietri](https://twitter.com/sergiopietri)
