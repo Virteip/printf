@@ -14,15 +14,7 @@ char *func_p(va_list args, flags_t flags)
 
 	dec = (unsigned long int)va_arg(args, void*);
 	if (dec == 0)
-	{	s = malloc(sizeof(char) * 6);
-		if (s)
-		{	s[0] = '(';
-			s[1] = 'n';
-			s[2] = 'i';
-			s[3] = 'l';
-			s[4] = ')';
-			s[5] = '\0'; }
-		return (s); }
+	
 	tmp = dec;
 	while (tmp)
 	{

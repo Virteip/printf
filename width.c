@@ -30,17 +30,3 @@ char *addwidth(char *s, int width)
 
 	return (tmp);
 }
-
-/**
- * adjprecis - adjusts precision of a value
- * @s: input string
- * @prec: gives minimum number of digits
- * Return: returns new string with length equal to width
- */
-char *adjprecis(char *s, int prec)
-{
-	char *tmp = NULL;
-	(void)s;
-	(void)prec;
-	return (tmp);
-}

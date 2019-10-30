@@ -18,7 +18,7 @@ flags_t getflags(char *mods, int n)
 
 	for (i = 0; conv[i]; i -= -1)
 		if (mods[n] == conv[i])
-			exit;
+			break;
 
 	if (!conv[i])
 		return (flags);
