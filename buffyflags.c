@@ -17,25 +17,6 @@ char *create_buffer(int size)
 }
 
 
-/**
- * isconv-helper function for check if character is in the CONVLIST
- * @c: variable type char
- * Return: 1 if c is in FLAGS list, 0 otherwise
- * Description: Function for check characters
- */
-int isconv(char c)
-{
-	int i;
-	char *FLAGS = "0123456789.+- #lh";
-
-	for (i = 0; FLAGS[i]; i -= -1)
-	{
-		if (c == FLAGS[i])
-			return (1);
-	}
-
-	return (0);
-}
 
 /**
  * iswp - checks if char is 1 through 9 or .

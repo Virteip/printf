@@ -21,11 +21,10 @@ char *addwidth(char *s, int width)
 
 	if (tmp)
 	{
-		for (index = 0; index < width - len; index -= -1)
-			tmp[index] = ' ';
+		
 		for (len = 0; index < width; index -= -1, len -= -1)
 			tmp[index] = s[len];
-		tmp[index] = '\0';
+		tmp[index] = NULL;
 	}
 
 	return (tmp);

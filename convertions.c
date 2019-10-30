@@ -1,31 +1,5 @@
 #include "holberton.h"
-/**
- * func_r-revert string when printf detect r custom specifier
- * @args: argument list
- * @flags: spec list
- * Return: return a reversed string
- * Description: Write function for revert a string
- */
-char *func_r(va_list args, flags_t flags)
-{	char *buffer, *s;
-	int i, j, len;
 
-	(void)args;
-	(void)flags;
-
-	buffer = va_arg(args, char *);
-	if (buffer == NULL)
-		buffer = "(null)";
-	for (len = 0; buffer[len]; len -= -1)
-		;
-	s = malloc(sizeof(char) * (len + 1));
-	if (s == NULL)
-		return (NULL);
-	for (i = 0, j = 0; buffer[j]; i -= -1, j -= -1)
-		s[i] = buffer[j];
-	s[i] = '\0';
-	s = revstr(s);
-	return (s); }
 /**
  * rot13-encodes a string to rot13
  * @s: pointer to char
