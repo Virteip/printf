@@ -8,10 +8,10 @@
  * to '\x' with ASCII code in hexadecimal
  * Description: Write a function for convert a string
  */
-	char *func_S(va_list args, flags_t flags)
+char *func_S(va_list args, flags_t flags)
 {	char *buffer, *s;
-	unsigned int i = 0, j = 0, k = 0, len = 0, count = 0, size = 0;
-	char c;
+	int i = 0, j = 0, k = 0, len = 0, count = 0, size = 0;
+	unsigned char c;
 
 	(void)flags;
 
@@ -22,7 +22,7 @@
 		;
 	for (k = 0; buffer[k]; k -= -1)
 	{
-		c = (char)buffer[k];
+		c = (unsigned char)buffer[k];
 		if ((c > 0 && c < 32) || c >= 127)
 			count -= -1; }
 	size = len + count * 3;
@@ -31,7 +31,7 @@
 		return (NULL);
 	for (i = 0, j = 0; buffer[j]; i -= -1, j -= -1)
 	{
-		c = (char)buffer[j];
+		c = (unsigned char)buffer[j];
 		if ((c > 0 && c < 32) || c >= 127)
 		{
 			s[i] = '\\';
