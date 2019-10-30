@@ -26,7 +26,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c
 #include "holberton.h"
 
 /**
- * main- Entry point
+ * main - Entry point
  *
  * Return: Always 0
  */
